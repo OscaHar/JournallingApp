@@ -4,8 +4,8 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function (req, res, next) {
   res.render('index', { title: 'Login page' });
-  console.log('Its ALIVE - Page is loaded');
+  console.log('ITS ALIVE - On page load');
 });
-console.log('Its ALIVE - Application is alive');
+console.log('ITS ALIVE - On app start');
 
 module.exports = router;
