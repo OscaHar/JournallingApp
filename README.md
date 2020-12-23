@@ -28,7 +28,7 @@ Man ska kunna se alla ens text meddelanden och de ska visas i en kronologisk ord
 
 GitHub: https://github.com/OscaHar/JournallingApp
 
-Heroku:
+Heroku: https://journaling-app.herokuapp.com/
 
 Airtable:
 
