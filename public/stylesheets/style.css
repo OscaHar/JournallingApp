@@ -1,8 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+@import url('https://fonts.googleapis.com/css2?family=Permanent%20Marker');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  position: relative;
+}
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px 'Nunito' !important;
+  background-image: linear-gradient(330deg, #a6d8fb, #11435c);
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  width: 100vw;
+  height: 100vh;
 }
 
-a {
-  color: #00B7FF;
+.btn {
+  background-color: #ed3d63 !important;
+  width: 80%;
+  height: 6.25%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  color: #f1f2f4 !important;
+  font-size: 20px !important;
+  border: none !important;
+  border-radius: 60px !important;
+  text-align: center !important;
+  -webkit-box-shadow: 0px 3px 17px 0px rgba(0, 0, 0, 0.67);
+  box-shadow: 0px 3px 17px 0px rgba(0, 0, 0, 0.67);
+}
+.btn--login {
+  top: 65.833%;
+}
+.btn--register {
+  top: 86.666%;
+}
+.btnTextCenter {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header {
+  height: 12.5vh;
+  width: 100vw;
+  top: 0px !important;
+  left: 0px !important;
+  position: absolute;
+  background-color: #f1f2f4;
+  -webkit-box-shadow: 0px 3px 17px 0px rgba(0, 0, 0, 0.67);
+  box-shadow: 0px 3px 17px 0px rgba(0, 0, 0, 0.67);
+}
+.header--login {
+  border-radius: 0 0 12.5vh 0;
+  width: 81.25vw;
+}
+.header--BigText {
+  font-weight: bold;
+  font: 24px 'Permanent Marker' !important;
+  padding-left: 4.16%;
+  padding-top: 4.16%;
+  margin-bottom: 0rem;
+  color: #11435c;
+}
+.header--SubText {
+  font: 18px 'Montserrat' !important ;
+  padding-left: 8.32%;
+  color: #ed3d63;
+}
+
+.text-login {
+  text-align: center;
+  color: #f1f2f4;
+  opacity: 0.75;
+
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+.text--Biglogin {
+  font: 36px 'Permanent Marker' !important;
+  top: 35vh !important;
+  margin-bottom: 0rem !important;
+}
+.text--SubLogin {
+  font: 16px 'Montserrat' !important;
+  top: calc(35vh + 156px / 2 + 16px) !important;
+}
+.text--Or {
+  top: 76.2495% !important;
+  font: 24px 'Nunito' !important;
 }
