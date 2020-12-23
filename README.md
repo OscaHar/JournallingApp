@@ -30,7 +30,7 @@ GitHub: https://github.com/OscaHar/JournallingApp
 
 Heroku: https://journaling-app.herokuapp.com/
 
-Airtable:
+Airtable: https://airtable.com/tbl0LjD96raQ77oad/viwaYc5HjODUDQ8kB?blocks=hide
 
 #
 
