@@ -1,5 +1,6 @@
+'use strict';
 //const { response } = require('express');
-
+console.log('ADD.JS LOADED');
 function addData() {
   console.log('WORKS');
   //Grabbing the text content from our textarea
