@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat');
 @import url('https://fonts.googleapis.com/css2?family=Permanent%20Marker');
+@import url('https://fonts.googleapis.com/css2?family=Spectral');
 
 * {
   margin: 0;
@@ -9,20 +10,24 @@
 }
 html {
   box-sizing: border-box;
-  position: relative;
+  max-width: 100%;
+  overflow-x: hidden !important;
 }
 body {
+  box-sizing: border-box;
   padding: 50px;
   font: 14px 'Nunito' !important;
   background-image: linear-gradient(330deg, #a6d8fb, #11435c);
   background-repeat: no-repeat;
   background-size: cover !important;
+  background-attachment: fixed;
   width: 100vw;
   height: 100vh;
 }
 
 .btn {
-  background-color: #ed3d63 !important;
+  /*background-color: #ed3d63 !important;*/
+  background-image: linear-gradient(135deg, #e21541, #ed3d63);
   width: 80%;
   height: 6.25%;
   position: absolute;
@@ -48,7 +53,7 @@ body {
 }
 
 .header {
-  height: 12.5vh;
+  height: 10vh;
   width: 100vw;
   top: 0px !important;
   left: 0px !important;
@@ -58,10 +63,11 @@ body {
   box-shadow: 0px 3px 17px 0px rgba(0, 0, 0, 0.67);
 }
 .header--login {
+  height: 102.5h;
   border-radius: 0 0 12.5vh 0;
   width: 81.25vw;
 }
-.header--BigText {
+.headerText {
   font-weight: bold;
   font: 24px 'Permanent Marker' !important;
   padding-left: 4.16%;
@@ -75,7 +81,11 @@ body {
   color: #ed3d63;
 }
 
-.text-login {
+.header--arrow {
+  border: none;
+}
+
+.text {
   text-align: center;
   color: #f1f2f4;
   opacity: 0.75;
@@ -97,4 +107,80 @@ body {
 .text--Or {
   top: 76.2495% !important;
   font: 24px 'Nunito' !important;
+}
+
+.circle {
+  width: 8.333vh !important;
+  height: 8.333vh !important;
+  bottom: 50px;
+  left: 50px;
+  border: none;
+  border-radius: 50%;
+  /*background-color: #ed3d63;*/
+  background-image: linear-gradient(150deg, #fc365c, #db2e67);
+  position: fixed;
+  z-index: 9999;
+}
+
+.circle > p {
+  font: 48px 'Permanent Marker' !important;
+  opacity: 1 !important;
+
+  top: 42%;
+  margin-bottom: 0;
+}
+
+.displayElement {
+  display: none !important;
+}
+
+#noteInput {
+  box-sizing: border-box;
+  display: block;
+  top: 10vh !important;
+  position: absolute;
+  width: 100%;
+  resize: none;
+  border: none;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(185, 184, 184);
+  font-weight: 700;
+  padding: 15px;
+  font: 16px 'Spectral' !important;
+}
+
+.centerInput {
+  text-align: center;
+}
+
+::placeholder {
+  font: 20px 'Spectral' !important;
+  color: rgb(161, 161, 161);
+  font-weight: bold;
+}
+
+.parent {
+  box-sizing: border-box;
+  display: grid;
+  top: 10vh !important;
+  position: absolute;
+  width: 100%;
+  resize: none;
+  border: none;
+  left: 0px;
+  padding: 15px;
+  font: 16px 'Spectral' !important;
+}
+
+.parent > div.note {
+  background-color: rgba(241, 242, 244, 0.5);
+  padding: 10px;
+  width: 85vw;
+  height: 10vh;
+  margin: auto;
+  margin-top: 10px;
+}
+.parent > div.note > p {
+  color: rgba(0, 0, 0, 0.5);
 }
