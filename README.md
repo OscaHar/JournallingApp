@@ -54,6 +54,10 @@ _Git:_
   - Skickar ändringarna (commits) till GitHub
 - git pull
   - Tar ner main branchen till enheten
+- git log [ . . . ]
+  - Visar alla commits gjorda på den angivna filen
+- git show [ . . . commit id]
+  - Visar hur filen var efter en viss commit
 
 #
 
