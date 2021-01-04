@@ -1,10 +1,22 @@
 'use strict';
 //const { response } = require('express');
 console.log('ADD.JS LOADED');
+let today = new Date();
+let year = today.getFullYear();
+let month = today.getMonth();
+let day = today.getDate();
+let hour = today.getHours();
+let minute = today.getMinutes();
+
+// let removeParent = document.querySelectorAll('.parent')[0];
+
+let date = `${year}-${month + 1}-${day} ${hour}:${minute}`;
+console.log(date);
 function addData() {
   console.log('WORKS');
   //Grabbing the text content from our textarea
   let note = document.getElementById('noteInput').value;
+  //TODO: Get the current time
 
   //Fetches airtable so we can use it
   fetch(
@@ -19,6 +31,7 @@ function addData() {
           {
             fields: {
               Notes: note,
+              Date: date,
             },
           },
         ],
@@ -26,4 +39,8 @@ function addData() {
     }
   ).then(response => response.json());
   document.querySelector('.noteInput2').textContent = '';
+
+  // removeParent.parentNode.removeChild(removeParent);
+  document.getElementById('parent2').outerHTML = '';
+  let loadingTime = setTimeout(loader, 5000);
 }
