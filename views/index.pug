@@ -1,5 +1,11 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div.header 
+      p.headerText.header--BigText Notes
+      button.headerText.header--arrow.displayElement ❮
+  button.circle
+    p.text.btn--add +
+  div.centerInput 
+    textarea(name="Note input", cols="30", rows="10", placeholder="Write your text here...", maxlength="40").displayElement#noteInput.noteInput2
+    

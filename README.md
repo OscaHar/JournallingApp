@@ -28,9 +28,9 @@ Man ska kunna se alla ens text meddelanden och de ska visas i en kronologisk ord
 
 GitHub: https://github.com/OscaHar/JournallingApp
 
-Heroku:
+Heroku: https://journaling-app.herokuapp.com/
 
-Airtable:
+Airtable: https://airtable.com/tbl0LjD96raQ77oad/viwaYc5HjODUDQ8kB?blocks=hide
 
 #
 
@@ -54,6 +54,10 @@ _Git:_
   - Skickar ändringarna (commits) till GitHub
 - git pull
   - Tar ner main branchen till enheten
+- git log [ . . . ]
+  - Visar alla commits gjorda på den angivna filen
+- git show [ . . . commit id]
+  - Visar hur filen var efter en viss commit
 
 #
 
