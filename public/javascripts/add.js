@@ -7,6 +7,7 @@ let month = today.getMonth();
 let day = today.getDate();
 let hour = today.getHours();
 let minute = today.getMinutes();
+let order = today.getTime();
 
 // let removeParent = document.querySelectorAll('.parent')[0];
 
@@ -32,7 +33,9 @@ function addData() {
             fields: {
               Notes: note,
               Date: date,
+              Sorting: order,
             },
+            //id: order,
           },
         ],
       }),
@@ -40,7 +43,7 @@ function addData() {
   ).then(response => response.json());
   document.querySelector('.noteInput2').textContent = '';
 
-  // removeParent.parentNode.removeChild(removeParent);
-  document.getElementById('parent2').outerHTML = '';
-  let loadingTime = setTimeout(loader, 5000);
+  // document.getElementById('parent2').outerHTML = '';
+  //REMINDER: If new note is not added before it gets refreshed, removed comment below to increas loading time
+  let loadingTime = setTimeout(loader, 500);
 }
