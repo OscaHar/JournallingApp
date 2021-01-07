@@ -19,9 +19,6 @@ window.onload = function () {
     .querySelector('.header--arrow')
     .addEventListener('click', function () {
       //TODO: Check if textarea is empty or not before saving to airtable
-      //FIXME
-      addData();
-      loader(); //Loads the new note so it gets displayed
       document.querySelector('.circle').classList.toggle('displayElement');
       document
         .querySelector('.header--BigText')
@@ -32,6 +29,9 @@ window.onload = function () {
       document.querySelector('.parent').classList.toggle('displayElement');
 
       document.querySelector('.noteInput2').classList.toggle('displayElement');
+      //FIXME
+      addData();
+      loader(); //Loads the new note so it gets displayed
       document.getElementById('noteInput').value = '';
     });
 };
