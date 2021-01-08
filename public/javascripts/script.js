@@ -3,6 +3,7 @@
 console.log('SCRIPT.JS LOADED');
 
 window.onload = function () {
+  loader();
   document.querySelector('.circle').addEventListener('click', function () {
     document.querySelector('.circle').classList.toggle('displayElement');
     document
@@ -12,7 +13,6 @@ window.onload = function () {
     document.querySelector('.noteInput2').classList.toggle('displayElement');
     document.querySelector('.parent').classList.toggle('displayElement');
     document.getElementById('noteInput').focus();
-    console.log('CLICK!');
   });
 
   document
@@ -31,7 +31,6 @@ window.onload = function () {
       document.querySelector('.noteInput2').classList.toggle('displayElement');
       //FIXME
       addData();
-      loader(); //Loads the new note so it gets displayed
-      document.getElementById('noteInput').value = '';
+      let loadingTime = setTimeout(refresh, 150);
     });
 };
