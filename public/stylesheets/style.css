@@ -177,10 +177,15 @@ body {
   background-color: rgba(241, 242, 244, 0.5);
   padding: 10px;
   width: 85vw;
-  height: 10vh;
   margin: auto;
   margin-top: 10px;
 }
 .parent > div.note > p {
-  color: rgba(0, 0, 0, 0.5);
+  margin: 0 0 5px 0;
+  color: rgba(0, 0, 0, 0.75);
+}
+.parent > div.note > p.date {
+  margin-bottom: 0;
+  font-size: 12px;
+  font-style: italic;
 }
