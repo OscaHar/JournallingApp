@@ -2,35 +2,34 @@
 
 console.log('SCRIPT.JS LOADED');
 
+let circle = document.querySelector('.circle');
+let BigText = document.querySelector('.header--BigText');
+let arrow = document.querySelector('.header--arrow');
+let noteInput2 = document.querySelector('.noteInput2');
+let noteInput = document.getElementById('noteInput');
+
+let today = new Date();
+let year = today.getFullYear();
+let month = today.getMonth();
+let day = today.getDate();
+let hour = today.getHours();
+let minute = today.getMinutes();
+let order = today.getTime();
+let date = `${year}-${month + 1}-${day} ${hour}:${minute}`;
+
 window.onload = function () {
   loader();
-  document.querySelector('.circle').addEventListener('click', function () {
-    document.querySelector('.circle').classList.toggle('displayElement');
-    document
-      .querySelector('.header--BigText')
-      .classList.toggle('displayElement');
-    document.querySelector('.header--arrow').classList.toggle('displayElement');
-    document.querySelector('.noteInput2').classList.toggle('displayElement');
+  circle.addEventListener('click', function () {
+    circle.classList.toggle('displayElement');
+    BigText.classList.toggle('displayElement');
+    arrow.classList.toggle('displayElement');
+    noteInput2.classList.toggle('displayElement');
     document.querySelector('.parent').classList.toggle('displayElement');
-    document.getElementById('noteInput').focus();
+    noteInput.focus();
   });
 
-  document
-    .querySelector('.header--arrow')
-    .addEventListener('click', function () {
-      //TODO: Check if textarea is empty or not before saving to airtable
-      document.querySelector('.circle').classList.toggle('displayElement');
-      document
-        .querySelector('.header--BigText')
-        .classList.toggle('displayElement');
-      document
-        .querySelector('.header--arrow')
-        .classList.toggle('displayElement');
-      document.querySelector('.parent').classList.toggle('displayElement');
-
-      document.querySelector('.noteInput2').classList.toggle('displayElement');
-      //FIXME
-      addData();
-      let loadingTime = setTimeout(refresh, 150);
-    });
+  arrow.addEventListener('click', function () {
+    addData();
+    let loadingTime = setTimeout(refresh, 100);
+  });
 };
