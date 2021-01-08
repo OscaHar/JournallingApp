@@ -21,6 +21,6 @@ window.onload = function () {
 
   arrow.addEventListener('click', function () {
     addData();
-    let loadingTime = setTimeout(refresh, 100);
+    let loadingTime = setTimeout(refresh, 150);
   });
 };
