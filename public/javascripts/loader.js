@@ -43,5 +43,6 @@ function loader() {
           document.getElementById('container').appendChild(div);
         }
       }
-    });
+    })
+    .catch(error => console.error(error));
 }

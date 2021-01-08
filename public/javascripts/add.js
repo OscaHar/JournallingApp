@@ -39,7 +39,9 @@ function addData() {
           ],
         }),
       }
-    ).then(response => response.json());
+    )
+      .then(response => response.json())
+      .catch(error => console.error(error));
   } else {
     console.log('CANT ADD EMPTY NOTE');
   }
