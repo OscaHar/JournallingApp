@@ -14,20 +14,34 @@ function loader() {
       div.classList.add('parent');
 
       var markup = '';
-      records.sort(
-        (a, b) => (b.fields.Sorting > a.fields.Sorting ? 1 : -1)
-        //parseFloat(a.fields.Sorting) - parseFloat(b.fields.Sorting)
-      );
-      for (var i = 0; i < data.records.length; i++) {
+
+      //Sorts the notes in the wished order
+      records.sort((a, b) => (b.fields.Sorting > a.fields.Sorting ? 1 : -1));
+
+      //Displayes all the notes
+
+      if (data.records.length < 1) {
+        console.log('NO NOTES');
         markup += `
         <div class="note">
-        <p>${data.records[i].fields.Notes}</p>
-        <p>${data.records[i].fields.Date}</p>
+        <p>No notes added! Click the add button to get started!</p>
+        <p class="date">01-01-01 01:01</p>
         </div>
         `;
-
         div.innerHTML = markup;
         document.getElementById('container').appendChild(div);
+      } else {
+        for (var i = 0; i < data.records.length; i++) {
+          markup += `
+          <div class="note">
+          <p>${data.records[i].fields.Notes}</p>
+          <p class="date">${data.records[i].fields.Date}</p>
+          </div>
+          `;
+
+          div.innerHTML = markup;
+          document.getElementById('container').appendChild(div);
+        }
       }
     });
 }
