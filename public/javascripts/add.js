@@ -2,6 +2,15 @@
 
 console.log('ADD.JS LOADED');
 
+let today = new Date();
+let year = today.getFullYear();
+let month = today.getMonth();
+let day = today.getDate();
+let hour = today.getHours();
+let minute = today.getMinutes();
+let order = today.getTime();
+let date = `${year}-${month + 1}-${day} ${hour}:${minute}`;
+
 function addData() {
   //Grabbing the text content from our textarea
   let note = document.getElementById('noteInput').value;
@@ -30,7 +39,9 @@ function addData() {
           ],
         }),
       }
-    ).then(response => response.json());
+    )
+      .then(response => response.json())
+      .catch(error => console.error(error));
   } else {
     console.log('CANT ADD EMPTY NOTE');
   }
