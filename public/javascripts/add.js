@@ -12,38 +12,45 @@ let order = today.getTime();
 // let removeParent = document.querySelectorAll('.parent')[0];
 
 let date = `${year}-${month + 1}-${day} ${hour}:${minute}`;
-console.log(date);
 function addData() {
   console.log('WORKS');
   //Grabbing the text content from our textarea
   let note = document.getElementById('noteInput').value;
   //TODO: Get the current time
 
-  //Fetches airtable so we can use it
-  fetch(
-    `https://api.airtable.com/v0/app92BlzQFv5IKqof/journalData?api_key=keyoVMiz3n49GzOHb`,
-    {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        records: [
-          {
-            fields: {
-              Notes: note,
-              Date: date,
-              Sorting: order,
+  if (note != '') {
+    //Fetches airtable so we can use it
+    fetch(
+      `https://api.airtable.com/v0/app92BlzQFv5IKqof/journalData?api_key=keyoVMiz3n49GzOHb`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          records: [
+            {
+              fields: {
+                Notes: note,
+                Date: date,
+                Sorting: order,
+              },
+              //id: order,
             },
-            //id: order,
-          },
-        ],
-      }),
-    }
-  ).then(response => response.json());
-  document.querySelector('.noteInput2').textContent = '';
+          ],
+        }),
+      }
+    ).then(response => response.json());
+    document.querySelector('.noteInput2').textContent = '';
+  } else {
+    console.log('CANT ADD EMPTY NOTE');
+  }
 
   // document.getElementById('parent2').outerHTML = '';
   //REMINDER: If new note is not added before it gets refreshed, removed comment below to increas loading time
-  let loadingTime = setTimeout(loader, 500);
+}
+
+function refresh() {
+  location.reload();
+  console.log('RELOAD');
 }
